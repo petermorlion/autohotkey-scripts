@@ -4,7 +4,7 @@
 ;; Date: August, 2016
 ;; https://github.com/baderas/autohotkey-scripts
 
-Folder = C:\Users\%USERNAME%\autohotkey-scripts
+Folder = C:\Users\%USERNAME%\Projects\autohotkey-scripts
 
 Master = Autorun_ahk.ahk
 Ingore1 = WindowPlacementFunctions.ahk
