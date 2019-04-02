@@ -86,6 +86,14 @@ Win__Fling2(FlingDirection = 1, WinID = "A", DoubleColumns = 0, Column = 0)
         Monitor%A_Index%Height := Monitor%A_Index%Bottom - Monitor%A_Index%Top
         Monitor%A_Index%Positions := Ceil(Monitor%A_Index%Width /  Monitor%A_Index%Height)
         Monitor%A_Index%PositionSize := (Monitor%A_Index%Width / Monitor%A_Index%Positions)
+
+        ; If screen is "too wide" (e.g. 3840x1080), we end up with 4 position that are too
+        ; thin for comfort. So we reduce by 1.
+        if (Monitor%A_Index%PositionSize < 1000)
+        {
+            Monitor%A_Index%Positions := Ceil(Monitor%A_Index%Width /  Monitor%A_Index%Height) - 1
+            Monitor%A_Index%PositionSize := (Monitor%A_Index%Width / Monitor%A_Index%Positions)
+        }
     }
    
     ; Retrieve the target window's original minimized / maximized state
