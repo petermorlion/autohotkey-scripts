@@ -168,11 +168,11 @@ Win__Fling2(FlingDirection = 1, WinID = "A", DoubleColumns = 0, Column = 0)
         }
     }
     
-    HeightCompensationFactor := (Monitor%CurrMonitor%Height//100)-(Mod(Monitor%CurrMonitor%Height//100,5))
+    HeightCompensationFactor := (Monitor%CurrMonitor%Height//100)-(Mod(Monitor%CurrMonitor%Height//100,5)) - 10
     ;WidthCompensationFactor := (Monitor%CurrMonitor%Width//100)-(Mod(Monitor%CurrMonitor%Width//100,5))
     ;WidthCompensationFactor2 := (WidthCompensationFactor/2)
-    WidthCompensationFactor := 20
-    WidthCompensationFactor2 := Round(WidthCompensationFactor/2)
+    WidthCompensationFactor := 5
+    WidthCompensationFactor2 := 5
     ; If a columnt is set, ignore the rest.
     if (Column > 0)
     {
